@@ -16,10 +16,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintVertical_bias="0.468" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -27,14 +27,16 @@
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
         android:ems="10"
+        android:hint="\t\tUsername"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:textColorHint="@color/Primary"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.871" />
+        app:layout_constraintVertical_bias="0.874" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
@@ -42,8 +44,10 @@
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
         android:ems="10"
+        android:hint="\t\tEmail"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:textColorHint="@color/Primary"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -57,7 +61,10 @@
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
         android:ems="10"
+        android:hint="\t\tPassword"
         android:inputType="textPassword"
+        android:textColorHint="@color/Primary"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -71,7 +78,10 @@
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
         android:ems="10"
+        android:hint="\t\tVerify Password"
         android:inputType="textPassword"
+        android:textColorHint="@color/Primary"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/switch1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -84,6 +94,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Switch"
+        android:textOff="Female"
+        android:textOn="Male"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -111,7 +123,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/secondarybutton"
-        android:text="Button"
+        android:text="Sign Up With"
         android:textColor="@color/Primary"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -127,12 +139,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
-        android:text="TextView"
+        android:text="Already Have An Account? Sign In!"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5"
         app:layout_constraintVertical_bias="0.639" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:background="@drawable/img_2"
+        android:onClick="onBackClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

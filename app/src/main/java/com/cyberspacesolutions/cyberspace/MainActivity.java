@@ -18,4 +18,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginScreen.class);
         startActivity(intent);
     }
+    public void onRegisterClick(View v){
+        Intent intent = new Intent(this, SignupScreen.class);
+        startActivity(intent);
+    }
 }
