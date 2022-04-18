@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/inputfield.xml" value="0.15462962962962962" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/primarybutton.xml" value="0.15925925925925927" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/secondarybutton.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/test.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_login_screen.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_signup_screen.xml" value="0.264" />
       </map>
     </option>
   </component>
