@@ -36,6 +36,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/primarybutton"
+        android:onClick="onLoginClick"
         android:text="LOG IN"
         android:textColor="@color/white"
         android:textSize="16sp"
