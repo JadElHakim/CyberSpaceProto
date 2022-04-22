@@ -14,7 +14,7 @@
         android:textColor="@color/Primary"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/userNameRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.468" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/userNameRegister"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
@@ -31,7 +31,7 @@
         android:inputType="textPersonName"
         android:textColorHint="@color/Primary"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.874" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
@@ -48,7 +48,7 @@
         android:inputType="textPersonName"
         android:textColorHint="@color/Primary"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword2"
+        app:layout_constraintBottom_toTopOf="@+id/passwordRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.9" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/passwordRegister"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
@@ -65,7 +65,7 @@
         android:inputType="textPassword"
         android:textColorHint="@color/Primary"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword3"
+        app:layout_constraintBottom_toTopOf="@+id/verifyPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
         app:layout_constraintVertical_bias="0.913" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/verifyPassword"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
@@ -96,7 +96,7 @@
         android:text="Switch"
         android:textOff="Female"
         android:textOn="Male"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,10 +104,11 @@
         app:layout_constraintVertical_bias="0.861" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
+        android:id="@+id/SignUpButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/primarybutton"
+        android:onClick="onSignUp"
         android:text="SIGN UP"
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -161,5 +162,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
