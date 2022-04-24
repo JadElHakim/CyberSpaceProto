@@ -6,4 +6,16 @@
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="types_array">
+        <item>Vulnerability Type</item>
+        <item>DDOS</item>
+        <item>Zero Day</item>
+        <item>Phishing</item>
+        <item>Malware</item>
+        <item>Spam</item>
+        <item>Spyware</item>
+        <item>Keylogger</item>
+        <item>XSS</item>
+        <item>SQL injection</item>
+    </string-array>
 </resources>

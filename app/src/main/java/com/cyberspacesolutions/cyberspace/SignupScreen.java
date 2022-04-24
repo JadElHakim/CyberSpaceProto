@@ -47,9 +47,10 @@ public class SignupScreen extends AppCompatActivity {
 
                 URL url;
                 HttpURLConnection http;
-                String usernameHolder= username.getText().toString();
-                String emailHolder= email.getText().toString();
-                String passwordHolder= password.getText().toString();
+                String usernameHolder= username.getText().toString().trim();
+                String emailHolder= email.getText().toString().trim();
+                String passwordHolder= password.getText().toString().trim();
+                 Log.e("testing",passwordHolder);
                 try{
 
                     url = new URL(SignupURL);
@@ -59,11 +60,10 @@ public class SignupScreen extends AppCompatActivity {
                     http.setDoInput(true);
                     http.setChunkedStreamingMode(0);
                     OutputStream outputStream = http.getOutputStream();
-                    OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
+                    OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream,"UTF-8");
                     BufferedWriter writer = new BufferedWriter(outputStreamWriter);
 
-                    writer.write("username="+usernameHolder+"&"+"email="+emailHolder+"&"+"pass="+passwordHolder);
-                    // writer.write("amount=2000&currency=USD");
+                    writer.write("username="+usernameHolder+"&"+"email="+emailHolder+"&"+"password="+passwordHolder);
                     writer.flush();
                 }
                 catch(Exception e){

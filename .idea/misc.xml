@@ -3,20 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/backgroundprofile.xml" value="0.290625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/inputfield.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/primarybutton.xml" value="0.15925925925925927" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/secondarybutton.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/drawable/test.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_login_screen.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_list_item.xml" value="0.4" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_login_screen.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_read_post.xml" value="0.2346014492753623" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/activity_signup_screen.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_dashboard.xml" value="0.23867753623188406" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_home.xml" value="0.4" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_notification.xml" value="0.23505434782608695" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_notifications.xml" value="0.23867753623188406" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_profile.xml" value="0.4578627280625543" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_publish.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/fragment_read_post.xml" value="0.2346014492753623" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/layout/list_item.xml" value="0.536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/CyberSpace/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2" />
       </map>

@@ -32,7 +32,7 @@
             android:ems="10"
             android:hint="\t\tTitle"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/spinner"
+            app:layout_constraintBottom_toTopOf="@+id/typeSpinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             app:layout_constraintVertical_bias="0.716" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/typeSpinner"
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:background="@drawable/inputfield"

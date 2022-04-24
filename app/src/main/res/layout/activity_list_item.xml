@@ -8,6 +8,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="350dp"
         android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/inputfield"
         app:barrierMargin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,16 +48,17 @@
 
         <TextView
             android:id="@+id/infoView"
-            android:layout_width="314dp"
-            android:layout_height="86dp"
+            android:layout_width="313dp"
+            android:layout_height="78dp"
             android:text="TextView"
             android:textColor="#8F90A7"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintHorizontal_bias="0.405"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.861" />
+            app:layout_constraintVertical_bias="0.813" />
 
         <TextView
             android:id="@+id/textView17"
@@ -63,18 +66,19 @@
             android:layout_height="wrap_content"
             android:text="Read Research"
             android:textColor="@color/Primary"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.975"
+            app:layout_constraintHorizontal_bias="0.973"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.981" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/TitleView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="-2dp"
             android:layout_marginBottom="5dp"
             android:text="Research TItle"
             android:textColor="@color/Primary"

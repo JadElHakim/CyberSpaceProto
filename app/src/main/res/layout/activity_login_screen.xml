@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/logInpassword"
         app:layout_constraintVertical_bias="0.135" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.11" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/loginUsername"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
@@ -76,7 +76,7 @@
         android:textColor="@color/Primary"
         android:textColorHint="@color/Primary"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/logInpassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +84,7 @@
         app:layout_constraintVertical_bias="0.645" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/logInpassword"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:background="@drawable/inputfield"
