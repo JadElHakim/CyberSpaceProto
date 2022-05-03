@@ -93,7 +93,6 @@ public class LoginScreen extends AppCompatActivity {
                     String profile_description = test.getString("profile_description");
                     editor.putString("profile_description", profile_description);
                     user = new User(id, username, career, profile_description);
-                    Toast.makeText(getBaseContext(), ""+test, Toast.LENGTH_LONG).show();
                     editor.commit();
                     Intent intent = new Intent(getBaseContext(), HomeScreen.class);
                     startActivity(intent);

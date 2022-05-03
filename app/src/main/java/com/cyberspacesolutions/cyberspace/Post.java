@@ -1,6 +1,7 @@
 package com.cyberspacesolutions.cyberspace;
 
 import java.sql.Blob;
+import java.sql.Struct;
 
 public class Post {
     String post_title;
@@ -8,15 +9,14 @@ public class Post {
     String vulnerability_description;
     String mitigation_description;
     //Blob profile ;
-    int id ;
-
-    public Post(String post_title, String vulnerability_type, String vulnerability_description, String mitigation_description,  int id) {
+    String username;
+    public Post(String post_title, String vulnerability_type, String vulnerability_description, String mitigation_description,  String username) {
         this.post_title = post_title;
         this.vulnerability_type = vulnerability_type;
         this.vulnerability_description = vulnerability_description;
         this.mitigation_description = mitigation_description;
        // this.profile = profile;
-        this.id = id;
+        this.username = username;
     }
 
     public String getPost_title() {
@@ -59,11 +59,11 @@ public class Post {
    //     this.profile = profile;
    // }
 
-    public int getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUsername(int id) {
+        this.username = username;
     }
 }

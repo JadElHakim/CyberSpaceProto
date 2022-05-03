@@ -130,16 +130,15 @@ public class HomeFragment extends Fragment {
             JSONArray ja = null;
             try {
                 ja = new JSONArray(s);
-                for(int i =0; i < ja.length() ; i++) {
+                for(int i =ja.length()-1; i >= 0 ; i--) {
                     JSONObject test = ja.getJSONObject(i);
                     String post_title = test.getString("post_title");
                     String vulnerability_type = test.getString("vulnerability_type");
                     String vulnerability_description = test.getString("vulnerability_description");
                     String mitigation_description = test.getString("mitigation_description");
-                    int id = test.getInt("id");
-                    Post p = new Post(post_title,vulnerability_type,vulnerability_description,mitigation_description,id);
+                    String username = test.getString("username");
+                    Post p = new Post(post_title,vulnerability_type,vulnerability_description,mitigation_description,username);
                     listitems.add(p);
-
                 }
                 PostAdapter adapter= new PostAdapter(getActivity(), listitems);
                 posts.setAdapter(adapter);

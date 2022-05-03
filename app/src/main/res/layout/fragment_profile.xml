@@ -73,7 +73,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ProfileBanner"
             app:layout_constraintVertical_bias="0.929"
-            tools:src="@tools:sample/avatars" />
+            android:src="@drawable/default_profile" />
 
         <TextView
             android:id="@+id/PublishedResearch"
@@ -83,6 +83,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/backgroundprofile"
             android:text="Published 0"
+            android:paddingTop="7dp"
             android:textAlignment="center"
             android:textColor="@color/Primary"
             android:textStyle="bold"
@@ -104,6 +105,22 @@
             app:layout_constraintTop_toBottomOf="@+id/ProfileBanner"
             app:layout_constraintVertical_bias="1.0"
             tools:listitem="@layout/activity_list_item" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="121dp"
+            android:background="@drawable/primarybutton"
+            android:onClick="onLogOut"
+            android:text="LogOut"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/ProfileBanner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.996"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

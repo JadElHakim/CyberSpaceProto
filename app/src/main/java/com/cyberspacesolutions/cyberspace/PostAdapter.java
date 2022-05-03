@@ -30,6 +30,8 @@ public class PostAdapter extends ArrayAdapter {
             listItem = LayoutInflater.from(pcontext).inflate(R.layout.activity_list_item,parent,false);
 
         Post currentpost = postslist.get(position);
+        TextView username = (TextView) listItem.findViewById(R.id.PostUserName);
+        username.setText(currentpost.getUsername());
 
         TextView title = (TextView) listItem.findViewById(R.id.TitleView);
         title.setText(currentpost.getPost_title());

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,8 @@ public class ProfileFragment extends Fragment {
     TextView usernameView;
     TextView careerView;
     TextView profile_descriptionView;
+    SharedPreferences sp;
+    Button logout;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -68,7 +71,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        SharedPreferences sp = this.getActivity().getSharedPreferences("User", Context.MODE_PRIVATE);
+         sp = this.getActivity().getSharedPreferences("User", Context.MODE_PRIVATE);
         int id = sp.getInt("id", 0);
         String username = sp.getString("username", "");
         String career = sp.getString("career", "");
@@ -80,6 +83,8 @@ public class ProfileFragment extends Fragment {
         careerView.setText(career);
         profile_descriptionView.setText(profile_description);
         // Inflate the layout for this fragment
+        logout = view.findViewById(R.id.logoutButton);
         return view;
     }
+
 }
