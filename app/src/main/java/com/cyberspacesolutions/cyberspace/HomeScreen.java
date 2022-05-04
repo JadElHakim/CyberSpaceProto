@@ -39,8 +39,7 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
         replaceFragment(new HomeFragment());
 
-       // adapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item,listitems);
-     ///   posts.setAdapter(adapter);
+        //set fragment view depending on the fragment id
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {

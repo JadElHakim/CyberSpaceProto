@@ -30,11 +30,12 @@ import java.net.URL;
 public class LoginScreen extends AppCompatActivity {
     EditText username,password;
     Button Signin;
-    String SigninURL = "http://192.168.1.105:8080/cyberspace/loginuser.php";
+    //sign in post request url
+    String SigninURL = "http://192.168.1.106:8080/cyberspace/loginuser.php";
     SignInExecution be ;
     User user;
     SharedPreferences sp;
-
+//async task to connect to db through php script
     class SignInExecution extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... params) {
@@ -79,6 +80,8 @@ public class LoginScreen extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             JSONArray ja = null;
+            //check if the credentials are available
+            // and if user put nothing prompt him to fill in the fields
             try {
                 if(result.compareTo("Not Logged") != 0){
                     SharedPreferences.Editor editor = sp.edit();
@@ -114,18 +117,26 @@ public class LoginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login_screen);
         username = (EditText) findViewById(R.id.loginUsername);
         password = (EditText) findViewById(R.id.logInpassword);
+        //init shared Preferences to save user info to show later in profile
         sp = getSharedPreferences("User", Context.MODE_PRIVATE);
     }
     public void onLoginClick(View view){
+        //execute async task on login pressed
         be = new SignInExecution();
         be.execute();
     }
 
     public void onBackClick(View view){
+        //go back to main page
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
+    public void onSignUp(View view){
+        //go to sign up page
+        Intent intent = new Intent(this, SignupScreen.class);
+        startActivity(intent);
+    }
 
 
 }

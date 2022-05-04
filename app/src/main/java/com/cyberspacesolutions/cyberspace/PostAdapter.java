@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-
+//CUSTOM ADAPTER FOR THE LIST VIEW
 public class PostAdapter extends ArrayAdapter {
     private Context pcontext;
     private ArrayList<Post> postslist = new ArrayList<>();

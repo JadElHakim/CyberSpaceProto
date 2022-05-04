@@ -2,20 +2,20 @@ package com.cyberspacesolutions.cyberspace;
 
 import java.sql.Blob;
 import java.sql.Struct;
-
+//CLASS TO BE ABLE TO CREATE A CUSTOM ADAPTER FOR THE LIST VIEW
+//DEFINES MAIN CHARACTERISTICS OF THE POST AND HAS GETTERS AND SETTERS TO ALL INFO INSIDE A POST
+//EASY TO USE TO PASS INFO INTO NEXT ACTIVITY AND READ THE POST INSIDE OF IT
 public class Post {
     String post_title;
     String vulnerability_type;
     String vulnerability_description;
     String mitigation_description;
-    //Blob profile ;
     String username;
     public Post(String post_title, String vulnerability_type, String vulnerability_description, String mitigation_description,  String username) {
         this.post_title = post_title;
         this.vulnerability_type = vulnerability_type;
         this.vulnerability_description = vulnerability_description;
         this.mitigation_description = mitigation_description;
-       // this.profile = profile;
         this.username = username;
     }
 
@@ -51,13 +51,7 @@ public class Post {
         this.mitigation_description = mitigation_description;
     }
 
-    //public Blob getProfile() {
-    //    return profile;
-    //}
 
-   // public void setProfile(Blob profile) {
-   //     this.profile = profile;
-   // }
 
     public String getUsername() {
         return username;

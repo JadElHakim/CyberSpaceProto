@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
 
     ListView posts ;
     String res = "";
-    String fetchpost = "http://192.168.1.105:8080/cyberspace/fetchposts.php";
+    String fetchpost = "http://192.168.1.106:8080/cyberspace/fetchposts.php";
     String data[];
 
     // TODO: Rename parameter arguments, choose names that match
@@ -88,10 +88,11 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+    //execute asynctask
     public void getData(){
         new DownloadTask().execute();
     }
-
+    //async task to connect to db through php script
     public class DownloadTask extends AsyncTask<String, Void, String> {
 
         protected String doInBackground(String... urls) {
@@ -129,6 +130,7 @@ public class HomeFragment extends Fragment {
             //TextView test = (TextView) findViewById(R.id.infoView);
             JSONArray ja = null;
             try {
+                //read json from php and display it in the list views
                 ja = new JSONArray(s);
                 for(int i =ja.length()-1; i >= 0 ; i--) {
                     JSONObject test = ja.getJSONObject(i);
@@ -137,6 +139,7 @@ public class HomeFragment extends Fragment {
                     String vulnerability_description = test.getString("vulnerability_description");
                     String mitigation_description = test.getString("mitigation_description");
                     String username = test.getString("username");
+                    //custom adapter for custom list view
                     Post p = new Post(post_title,vulnerability_type,vulnerability_description,mitigation_description,username);
                     listitems.add(p);
                 }
@@ -146,7 +149,6 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getActivity(), "i failed"+e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
-            // test.setText(s);
         }
 
     }

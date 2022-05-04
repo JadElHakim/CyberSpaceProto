@@ -47,7 +47,8 @@ public class PublishFragment extends Fragment{
     EditText vdesc;
     EditText mdesc;
     Button post;
-    String PostUrl= "http://192.168.1.105:8080/cyberspace/publishpost.php";
+    //post request to db url
+    String PostUrl= "http://192.168.1.106:8080/cyberspace/publishpost.php";
     SharedPreferences sharedP;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -93,7 +94,9 @@ public class PublishFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_publish, container, false);
+        //get username from shared preferences
         sharedP = this.getActivity().getSharedPreferences("User", Context.MODE_PRIVATE);
+        //init spinner
         sp = (Spinner) view.findViewById(R.id.typeSpinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(view.getContext(), R.array.types_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -101,6 +104,7 @@ public class PublishFragment extends Fragment{
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                //set type depending on the item selected from the spinner
                 type = (String) adapterView.getItemAtPosition(i);
             }
 
@@ -116,6 +120,7 @@ public class PublishFragment extends Fragment{
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //execute post request
                 Log.e("pressed?","Yes i am pressed");
                 new PostExecution().execute();
             }
@@ -124,7 +129,7 @@ public class PublishFragment extends Fragment{
         return view;
     }
 
-
+//async task to post into db
     class PostExecution extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... params) {
@@ -137,8 +142,8 @@ public class PublishFragment extends Fragment{
             String res = "";
 
             String usernameholder= sharedP.getString("username","");
-           // Toast.makeText(getActivity().getApplicationContext(), ""+username, Toast.LENGTH_SHORT).show();
             try {
+                //put data into json object and send to php script to parse it into the db
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("title",titleHolder);
                 jsonObject.put("vulnerability_description",vdescHolder);
@@ -172,7 +177,6 @@ public class PublishFragment extends Fragment{
             }
 
         }
-
         @Override
         protected void onPostExecute(String result) {
             Toast.makeText(getActivity().getApplicationContext(), "this is result"+result, Toast.LENGTH_SHORT).show();

@@ -71,8 +71,10 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        //get profile info from shared preferences
          sp = this.getActivity().getSharedPreferences("User", Context.MODE_PRIVATE);
         int id = sp.getInt("id", 0);
+        //set user info into profile fields
         String username = sp.getString("username", "");
         String career = sp.getString("career", "");
         String profile_description = sp.getString("profile_description","");

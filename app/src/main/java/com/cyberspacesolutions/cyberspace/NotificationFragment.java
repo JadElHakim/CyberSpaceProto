@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+//NOTHING TO SEE HERE JUST A DUMMY FRAGMENT
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link NotificationFragment#newInstance} factory method to

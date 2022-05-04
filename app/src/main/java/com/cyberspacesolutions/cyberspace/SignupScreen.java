@@ -36,15 +36,14 @@ import java.util.List;
 public class SignupScreen extends AppCompatActivity {
     EditText username,email,password,verify_password;
     Button SignUp;
-    String SignupURL = "http://192.168.1.105:8080/cyberspace/registeruser.php",res;
+    //sign up post request url
+    String SignupURL = "http://192.168.1.106:8080/cyberspace/registeruser.php",res;
     BackendExecution be ;
 
-
+    //async task to connect to db through php script
         class BackendExecution extends AsyncTask<String, Void, String> {
             @Override
             protected String doInBackground(String... params) {
-
-
                 URL url;
                 HttpURLConnection http;
                 String usernameHolder= username.getText().toString().trim();
@@ -98,11 +97,13 @@ public class SignupScreen extends AppCompatActivity {
         startActivity(intent);
     }
     public void onSignUp(View view) {
+            //check if all fields are filled else prompt user
         if (username.getText().toString().matches("") && email.getText().toString().matches("") && password.getText().toString().matches("") && verify_password.getText().toString().matches("")) {
 
             Toast.makeText(getBaseContext(), "Please fill in All fields", Toast.LENGTH_SHORT).show();
         }
         else{
+            //check if password field matches the verify password field else prompt user
             if (password.getText().toString().matches(verify_password.getText().toString())){
                 be = new BackendExecution();
                 be.execute();
@@ -112,6 +113,10 @@ public class SignupScreen extends AppCompatActivity {
             }
         }
     }
-
+    public void onSignIn(View view){
+            //go to signin page
+            Intent intent = new Intent(this, LoginScreen.class);
+            startActivity(intent);
+    }
     }
 

@@ -53,6 +53,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/secondarybutton"
+        android:onClick="onSignUp"
         android:text="Sign Up"
         android:textColor="@color/Primary"
         android:textSize="16sp"
