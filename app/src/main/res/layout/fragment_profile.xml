@@ -76,7 +76,7 @@
             android:src="@drawable/default_profile" />
 
         <TextView
-            android:id="@+id/PublishedResearch"
+            android:id="@+id/PublishedResearchText"
             android:layout_width="200dp"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"

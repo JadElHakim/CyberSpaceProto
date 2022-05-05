@@ -137,6 +137,9 @@ public class LoginScreen extends AppCompatActivity {
         Intent intent = new Intent(this, SignupScreen.class);
         startActivity(intent);
     }
+    public void onBackPressed() {
+        return;
+    }
 
 
 }
