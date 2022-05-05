@@ -179,8 +179,12 @@ public class PublishFragment extends Fragment{
         }
         @Override
         protected void onPostExecute(String result) {
-            Toast.makeText(getActivity().getApplicationContext(), "this is result"+result, Toast.LENGTH_SHORT).show();
             Log.e("ok but?","yes i reached here");
+            title.setText("");
+            vdesc.setText("");
+            mdesc.setText("");
+            sp.setSelection(0);
+
         }
     }
 }

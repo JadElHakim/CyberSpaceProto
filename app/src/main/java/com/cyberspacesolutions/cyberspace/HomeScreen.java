@@ -60,7 +60,9 @@ public class HomeScreen extends AppCompatActivity {
             return true;
         });
     }
-
+    public void onBackPressed() {
+        return;
+    }
     private void replaceFragment(Fragment fragment){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
