@@ -107,7 +107,8 @@ public class SignupScreen extends AppCompatActivity {
             if (password.getText().toString().matches(verify_password.getText().toString())){
                 be = new BackendExecution();
                 be.execute();
-                setContentView(R.layout.activity_login_screen);
+                Intent intent = new Intent(this, LoginScreen.class);
+                startActivity(intent);
             } else {
                 Toast.makeText(getBaseContext(), "Passwords Do Not Match!", Toast.LENGTH_SHORT).show();
             }

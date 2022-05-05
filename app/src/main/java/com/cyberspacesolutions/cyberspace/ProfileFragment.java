@@ -208,7 +208,6 @@ public class ProfileFragment extends Fragment {
                 PostAdapter adapter = new PostAdapter(getActivity(), listitems);
                 posts.setAdapter(adapter);
             } catch (JSONException e) {
-                Toast.makeText(getActivity(), "i failed" + e.getMessage(), Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
         }
