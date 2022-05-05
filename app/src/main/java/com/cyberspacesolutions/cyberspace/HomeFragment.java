@@ -1,13 +1,18 @@
 package com.cyberspacesolutions.cyberspace;
 
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -84,6 +89,22 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         posts = (ListView) view.findViewById(R.id.HomeListView);
+        posts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+               Post p = listitems.get(i);
+               Bundle ex = new Bundle();
+               Intent intent = new Intent(getActivity(),readpost.class);
+               ex.putString("username",p.getUsername());
+               ex.putString("title",p.getPost_title());
+               ex.putString("type",p.getVulnerability_type());
+               ex.putString("description",p.getVulnerability_description());
+               ex.putString("mitigation",p.getMitigation_description());
+               intent.putExtras(ex);
+               startActivity(intent);
+
+            }
+        });
         getData();
         // Inflate the layout for this fragment
         return view;
@@ -152,4 +173,5 @@ public class HomeFragment extends Fragment {
         }
 
     }
+
 }
